@@ -1,0 +1,12 @@
+gcloud init 
+gcloud config list 
+gcloud projects list 
+gcloud config set project PROJECT_ID 
+gcloud auth list 
+gcloud compute instances create my-vm --zone=us-central1-a
+gcloud compute instances list 
+gcloud compute instances delete my-vm
+gcloud services enable compute.googleapis.com 
+gcloud app deploy 
+gcloud beta billing accounts list
+Exit Cloud Shell 
