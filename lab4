@@ -1,0 +1,40 @@
+Step 1: Set up your project directory 
+Create a new directory for your web application or navigate to your existing 
+project directory. 
+If you're starting a new project, here’s an example structure for a simple Python 
+Flask application: 
+your-app/ 
+├── app.yaml 
+├── main.py 
+├── requirements.txt 
+● main.py: Your application code (Flask app for example). 
+● requirements.txt: List of dependencies for your project (e.g., Flask). 
+● app.yaml: Configuration file for App Engine.
+
+from flask import Flask 
+app = Flask(__name__) 
+@app.route('/') 
+def hello(): 
+return 'Hello, World!' 
+if __name__ == '__main__': 
+app.run()
+
+Step 3: Create a requirements.txt file 
+Flask==2.1.0
+
+Step 4: Create an app.yaml file 
+runtime: python39 
+instance_class: F2  
+env_variables: 
+
+automatic_scaling: 
+target_cpu_utilization: 0.65  
+on CPU usage 
+min_instances: 1   
+max_instances: 10   
+
+gcloud auth login
+gcloud init
+gcloud app deploy
+gcloud app browse
+
