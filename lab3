@@ -36,3 +36,15 @@ orage.object.v1.finalized" \
 
 --trigger-event-filters="bucket=your-bucket-name
 " \ --allow-unauthenticated
+
+
+echo "Hello Cloud Function!" > test.txt
+
+gcloud functions logs read gcs_trigger
+--region=us-central1
+
+
+For execution of Python file:
+python main.py
+If framework is not installed; install it using below command
+pip install functions_framework
